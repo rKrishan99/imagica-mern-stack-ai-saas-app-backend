@@ -1,5 +1,5 @@
-import express from 'express'; // Import express
-import userController from '../controllers/userController.js';// Import the registerUser and loginUser functions from userController.js
+import express from 'express'; 
+import userController from '../controllers/userController.js';
 import userAuth from '../middleware/auth.js';
 
 const { registerUser, loginUser, userCredits, getAllUsers,deleteUser } = userController;// Destructure the registerUser and loginUser functions
