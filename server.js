@@ -22,6 +22,7 @@ const startServer = async () => {
   try {
     await connectDB();
 
+    app.get('/api/test', (req, res) => res.send('OK')) // Add a test route
     app.use("/api/user", userRouter);
     app.use("/api/image", imageRouter);
     app.use("/api/auth", restPasswordRouter);
