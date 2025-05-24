@@ -22,7 +22,7 @@ const startServer = async () => {
   try {
     await connectDB();
 
-    app.get('/api/test', (req, res) => res.send('OK')) // Add a test route
+    app.get('/api/test', (req, res) => res.send('OK'))
     app.use("/api/user", userRouter);
     app.use("/api/image", imageRouter);
     app.use("/api/auth", restPasswordRouter);
@@ -31,7 +31,7 @@ const startServer = async () => {
     });
 
     app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`); // Log that the server is running
+      console.log(`✅ Server is running on port ${PORT}`); // Log that the server is running
     });
   } catch (error) {
     console.error("Error connecting to DB:", error);

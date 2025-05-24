@@ -4,6 +4,6 @@ import { requestPasswordReset, resetPassword } from '../controllers/authControll
 const restPasswordRouter = express.Router();
 
 restPasswordRouter.post('/forgot-password', requestPasswordReset);
-restPasswordRouter.post('/reset-password/:token', resetPassword);
+restPasswordRouter.post('/reset-password/', resetPassword);
 
 export default restPasswordRouter;
